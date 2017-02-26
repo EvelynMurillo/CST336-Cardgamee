@@ -2,6 +2,7 @@
     
     $cardNumbers = array();
     $scores = array();
+    $playerNum = 0;
    
     for($i = 1; $i <= 52; $i++)
     {
@@ -50,16 +51,22 @@
             
         }
         $scores[] = $score;
-        return($playerHand);
+        displayHand($playerHand, $playerNym);
         // The new player hand array is returned
         
     }
 
-    function displayHand($input) {
-        
-    
-    
-    }
+function displayHand($hand, $playerNum)
+{
+    global $scores;
+    global $playerNum;
+   for($i = 0; $i < sizeof($hand); $i++) {
+        echo "<img src='img/cards/" . $hand[$i] . ".png' />";
+        }
+    echo "Score: " . $scores[$playerNum];
+    $playerNum++;
+    echo "<br> </br>";
+}
     
     function displayWinner() {
     
