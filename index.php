@@ -61,7 +61,7 @@ function displayHand($hand, $playerNum)
     global $scores;
     global $playerNum;
    for($i = 0; $i < sizeof($hand); $i++) {
-        echo "<img src='img/cards/" . $hand[$i] . ".png' />";
+        echo "<img src='cards/" . $hand[$i] . ".png' />";
         }
     echo "Score: " . $scores[$playerNum];
     $playerNum++;
@@ -81,7 +81,7 @@ function displayWinner() {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TEST </title>
+        <title>SilverJack </title>
         
         <style>
             
@@ -91,6 +91,10 @@ function displayWinner() {
         </style>
     </head>
     <body>
-
+        <?php
+            for($j = 0; $j < 4; $j++){
+                getHand();
+            }
+        ?>
     </body>
 </html>
