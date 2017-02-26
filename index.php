@@ -81,7 +81,7 @@ function displayHand($hand, $playerNum)
     }
     echo "<br> </br>";
    for($i = 0; $i < sizeof($hand); $i++) {
-        echo "<img src='cards/" . $hand[$i] . ".png' />";
+        echo "<img id='shadow'src='cards/" . $hand[$i] . ".png' />";
         }
     echo "<h2> Score: " . $scores[$playerNum] . " </h2>";
     $playerNum++;
@@ -117,5 +117,17 @@ function displayWinner() {
             }
         ?>
         </div>
+        
+        <hr>
+        
+        <footer>
+            2017 &copy; Team Leo. <br />
+            Disclaimer: All material above is used for teaching purposes. Information might be inaccurate.
+            
+            <br />
+            
+            <img src = "../../img/csumb-logo.png" alt="CSUMB Logo" />
+        </footer>
+        
     </body>
 </html>
