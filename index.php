@@ -88,7 +88,7 @@ function displayHand($hand, $playerNum)
 }
 function displayWinner() {
   //global variables
-         global $score;
+         global $scores;
          global $players;
          $winner = 0;
          $lowScore = 0;
@@ -109,21 +109,27 @@ function displayWinner() {
          {
             if($j != $winner)
             {
-             $totalScore = $totalScore + $score[$j];
+             $totalScore = $totalScore + $scores[$j];
             }
              }
              //prints out the winner
-         echo 'The Winner is: ' . $players[$winner] . ' The Score is: ' . $totalScore;
-
-
-
-
-
-
-
-
-
-
+         echo 'The Winner is: ';
+         if($players[$winner] == 'torch')
+            {
+                echo 'Torch. The Score is: ' . $totalScore;
+            }
+        else if($players[$winner] == 'fantastic')
+            {
+                echo 'Mr. Fantastic. The Score is: ' . $totalScore;
+            }
+        else if($players[$winner] == 'thing')
+            {
+                echo 'Thing. The Score is: ' . $totalScore;
+            }
+        else
+            {
+                echo 'Human Torch. The Score is: ' . $totalScore;
+            }
 
 }
 
@@ -159,7 +165,7 @@ function displayWinner() {
             
             <br />
             
-            <img src = "../../img/csumb-logo.png" alt="CSUMB Logo" />
+            <img src = "img/csumb-logo.png" alt="CSUMB Logo" />
         </footer>
         
     </body>
