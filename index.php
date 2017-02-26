@@ -91,8 +91,6 @@
           }
 
 
-
-
 ?>
 
 
@@ -102,6 +100,10 @@
         <title>TEST </title>
     </head>
     <body>
+
+
+    <?=displayWinner()?>
+
 
     </body>
 </html>
