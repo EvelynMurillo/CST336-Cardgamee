@@ -147,6 +147,7 @@ function displayWinner() {
             for($j = 0; $j < 4; $j++){
                 getHand();
             }
+            displayWinner();
         ?>
         </div>
     </body>
