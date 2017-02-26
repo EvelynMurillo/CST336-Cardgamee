@@ -82,6 +82,13 @@ function displayWinner() {
 <html>
     <head>
         <title>TEST </title>
+        
+        <style>
+            
+            @import url("css/styles.css");
+            
+            
+        </style>
     </head>
     <body>
 
