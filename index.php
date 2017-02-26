@@ -63,7 +63,7 @@ function displayHand($hand, $playerNum)
    for($i = 0; $i < sizeof($hand); $i++) {
         echo "<img src='cards/" . $hand[$i] . ".png' />";
         }
-    echo "Score: " . $scores[$playerNum];
+    echo "<h2> Score: " . $scores[$playerNum] . " </h2>";
     $playerNum++;
     echo "<br> </br>";
 }

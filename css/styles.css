@@ -1,8 +1,9 @@
     img{
-        box-shadow:10px 10px 5px #888888;
+        box-shadow:10px 10px 5px #cc0000;
     }
 div {
         border:thin solid black;
+        background-color:red;
         margin:100px;
         margin-left:300px;
         margin-right:300px;
