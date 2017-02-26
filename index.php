@@ -89,7 +89,7 @@ function displayHand($hand, $playerNum)
 function displayWinner() {
   //global variables
          global $score;
-         global $player;
+         global $players;
          $winner = 0;
          $lowScore = 0;
          $totalScore = 0;
@@ -113,7 +113,7 @@ function displayWinner() {
             }
              }
              //prints out the winner
-         echo 'The Winner is: ' . $player[$winner] . ' The Score is: ' . $totalScore;
+         echo 'The Winner is: ' . $players[$winner] . ' The Score is: ' . $totalScore;
 
 
 
