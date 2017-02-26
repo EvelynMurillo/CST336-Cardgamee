@@ -1,3 +1,27 @@
     img{
         box-shadow:10px 10px 5px #888888;
     }
+dir {
+        border:thin solid black;
+        margin:100px;
+        margin-left:300px;
+        margin-right:300px;
+        border-radius:25px;
+    }
+            
+h1 {
+        text-align:center;
+        background-color:silver;
+        font-family:sans-serif;
+        color:white;
+        background:linear-gradient(grey,white);
+        border:thin solid grey;
+        margin-left:25px;
+        margin-right:25px;
+        background-size:80px 60px;
+    }
+            
+        footer {
+        margin-left:300px;
+        margin-right:300px;
+    }
