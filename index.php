@@ -2,6 +2,8 @@
 
     $cardNumbers = array();
     $scores = array();
+    $players = array("fantastic", "thing", "torch", "invisible");
+    $playerNum = 0;
 
     for($i = 1; $i <= 52; $i++)
     {
@@ -50,46 +52,80 @@
 
         }
         $scores[] = $score;
-        return($playerHand);
+        displayHand($playerHand, $playerNym);
         // The new player hand array is returned
 
     }
-
-    function displayHand($input) {
-
-
-
+function displayHand($hand, $playerNum)
+{
+    global $scores;
+    global $playerNum;
+    global $players;
+    echo "<img id='playerCard' src='player/" . $players[$playerNum] . ".jpg' />";
+    if($players[$playerNum] == 'fantastic')
+        {
+            echo "Mr. Fantastic";
+        }
+    else if($players[$playerNum] == 'thing')
+        {
+            echo "Thing";
+        }
+    else if($players[$playerNum] == 'torch')
+        {
+            echo "Human Torch";
+        }
+    else
+    {
+        echo "Invisible Woman";
     }
-      function displayWinner() {
-              //global variables
-              global $score;
-              global $player;
-              $winner = 0;
-              $lowScore = 0;
-              $totalScore = 0;
-              $closest=$score[0];
-              for( $i= 0; $i < 4; $i++ )// finds out who the winner is
-              {
-                  $lowScore=($score[$i]-42);
+    echo "<br> </br>";
+   for($i = 0; $i < sizeof($hand); $i++) {
+        echo "<img src='cards/" . $hand[$i] . ".png' />";
+        }
+    echo "<h2> Score: " . $scores[$playerNum] . " </h2>";
+    $playerNum++;
+    echo "<br> </br>";
+}
+function displayWinner() {
+  //global variables
+         global $score;
+         global $player;
+         $winner = 0;
+         $lowScore = 0;
+         $totalScore = 0;
+         $closest=$score[0];
+         for( $i= 0; $i < 4; $i++ )// finds out who the winner is
+         {
+             $lowScore=($score[$i]-42);
 
-                  if($lowScore<$closest)
-                  {
-                      $closest = $lowScore;
-                      $winner = $i;
-                  }
-              }
+             if($lowScore<$closest)
+             {
+                 $closest = $lowScore;
+                 $winner = $i;
+             }
+         }
 
-              for($j=0; $j<4; $j++) //prints out the winner out of the 4 players
-              {
-                 if($j != $winner)
-                 {
-                  $totalScore = $totalScore + $score[$j];
-                 }
-                  }
-                  //prints out the winner
-              echo 'The Winner is: ' . $player[$winner] . ' The Score is: ' . $totalScore;
-          }
+         for($j=0; $j<4; $j++) //prints out the winner out of the 4 players
+         {
+            if($j != $winner)
+            {
+             $totalScore = $totalScore + $score[$j];
+            }
+             }
+             //prints out the winner
+         echo 'The Winner is: ' . $player[$winner] . ' The Score is: ' . $totalScore;
 
+
+
+
+
+
+
+
+
+
+
+}
 
 ?>
 
@@ -97,13 +133,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TEST </title>
+        <title>SilverJack </title>
+
+        <style>
+            @import url("css/styles.css");
+        </style>
     </head>
     <body>
-
-
-    <?=displayWinner()?>
-
-
+        <h1> SilverJack </h1>
+        <div>
+        <?php
+            shuffle($players);
+            for($j = 0; $j < 4; $j++){
+                getHand();
+            }
+        ?>
+        </div>
     </body>
 </html>

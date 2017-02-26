@@ -1,7 +1,44 @@
     img{
+<<<<<<< HEAD
         box-shadow:10px 10px 5px #888888;
     }
     body
     {
       background-color: black;
     }
+=======
+        box-shadow:10px 10px 5px #cc0000;
+        
+    }
+    
+    #playerCard {
+        border-radius: 25px;
+    }
+    
+    
+div {
+        border:thin solid black;
+        background-color:red;
+        margin:100px;
+        margin-left:300px;
+        margin-right:300px;
+        border-radius:25px;
+    }
+          
+h1 {
+        text-align:center;
+        background-color:silver;
+        font-family:sans-serif;
+        color:white;
+        background:linear-gradient(grey,white);
+        border:thin solid grey;
+        margin-left:25px;
+        margin-right:25px;
+        background-size:80px 60px;
+    }
+            
+        footer {
+        margin-left:300px;
+        margin-right:300px;
+    }
+>>>>>>> b2b8a52ad370298c7cbd6e4c29dd995a8003f086
