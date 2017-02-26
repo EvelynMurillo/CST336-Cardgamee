@@ -2,6 +2,7 @@
     
     $cardNumbers = array();
     $scores = array();
+    $players = array("fantastic", "thing", "torch", "invisible");
     $playerNum = 0;
    
     for($i = 1; $i <= 52; $i++)
@@ -60,6 +61,25 @@ function displayHand($hand, $playerNum)
 {
     global $scores;
     global $playerNum;
+    global $players;
+    echo "<img src='player/" . $players[$playerNum] . ".jpg' />";
+    if($players[$playerNum] == 'fantastic')
+        {
+            echo "Mr. Fantastic";
+        }
+    else if($players[$playerNum] == 'thing')
+        {
+            echo "Thing";
+        }
+    else if($players[$playerNum] == 'torch')
+        {
+            echo "Human Torch";
+        }
+    else
+    {
+        echo "Invisible Woman";
+    }
+    echo "<br> </br>";
    for($i = 0; $i < sizeof($hand); $i++) {
         echo "<img src='cards/" . $hand[$i] . ".png' />";
         }
@@ -91,6 +111,7 @@ function displayWinner() {
         <h1> SilverJack </h1>
         <div>
         <?php
+            shuffle($players);
             for($j = 0; $j < 4; $j++){
                 getHand();
             }
