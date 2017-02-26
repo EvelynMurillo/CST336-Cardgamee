@@ -67,12 +67,12 @@ function displayHand($hand, $playerNum)
     $playerNum++;
     echo "<br> </br>";
 }
-    
-    function displayWinner() {
-    
-    
-    
-    }
+
+function displayWinner() {
+
+
+
+}
 
  
 ?>
