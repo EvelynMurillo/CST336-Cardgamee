@@ -1,6 +1,13 @@
     img{
         box-shadow:10px 10px 5px #cc0000;
+        
     }
+    
+    #playerCard {
+        border-radius: 25px;
+    }
+    
+    
 div {
         border:thin solid black;
         background-color:red;

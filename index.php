@@ -62,7 +62,7 @@ function displayHand($hand, $playerNum)
     global $scores;
     global $playerNum;
     global $players;
-    echo "<img src='player/" . $players[$playerNum] . ".jpg' />";
+    echo "<img id='playerCard' src='player/" . $players[$playerNum] . ".jpg' />";
     if($players[$playerNum] == 'fantastic')
         {
             echo "Mr. Fantastic";
