@@ -84,17 +84,17 @@ function displayWinner() {
         <title>SilverJack </title>
         
         <style>
-            
             @import url("css/styles.css");
-            
-            
         </style>
     </head>
     <body>
+        <h1> SilverJack </h1>
+        <div>
         <?php
             for($j = 0; $j < 4; $j++){
                 getHand();
             }
         ?>
+        </div>
     </body>
 </html>
