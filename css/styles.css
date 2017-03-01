@@ -1,19 +1,16 @@
-<<<<<<< HEAD
     #shadow {
-=======
+        box-shadow:10px 10px 5px #cc0000;
+        
+    }
+    
     img{
-<<<<<<< HEAD
         box-shadow:10px 10px 5px #888888;
     }
     body
     {
       background-color: black;
     }
-=======
->>>>>>> 6a605290ee602dc14cb9cc2ee31abffca8d73c88
-        box-shadow:10px 10px 5px #cc0000;
-        
-    }
+
     
     #playerCard {
         border-radius: 25px;
@@ -42,16 +39,11 @@ h1 {
         background-size:80px 60px;
     }
             
-<<<<<<< HEAD
+
 footer{
         font-size:.8em;
         text-align:center;
         box-shadow: none;
-    }
-=======
-        footer {
         margin-left:300px;
         margin-right:300px;
     }
->>>>>>> b2b8a52ad370298c7cbd6e4c29dd995a8003f086
->>>>>>> 6a605290ee602dc14cb9cc2ee31abffca8d73c88
